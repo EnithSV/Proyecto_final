@@ -1,0 +1,250 @@
+/* --------- Galería Nuestras marcas---------- */
+
+.galeria_marcas {
+  padding: 0.7em 0.7em;
+
+  h2 {
+    text-align: left;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+  }
+}
+
+.galeria_marcas-grid {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2em;
+}
+
+
+/* ---------CATÁLOGO---------- */
+
+.cabecera_catalogo {
+  padding: 4rem;
+  text-align: end;
+}
+
+.hero-txt h2 {
+  color: rgb(7, 0, 0)
+}
+
+.galeria_productos {
+  padding: 0.5em 0.5em;
+
+  h2 {
+    text-align: left;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    a {
+      margin-left: 10px;
+    }
+  }
+}
+
+.galeria_productos-grid {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2em;
+}
+
+
+.galeria_productos-nota {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+/* ------------PROMOCIONES --------- */
+.container_card {
+
+  height: auto;
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.card {
+  background: rgb(196, 201, 196);
+  height: auto;
+  width: 300px;
+  padding: 4em;
+  text-align: center;
+  border-radius: .7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: all .5s ease;
+
+
+  p {
+    color: black;
+    font-size: 1.5em;
+
+    span {
+      display: block;
+      font-size: 2em;
+      color: red;
+    }
+  }
+}
+
+
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 38px 5px rgba(0, 0, 0, 0.75);
+}
+
+.card_img {
+  border-radius: .5em;
+  background: red;
+  height: 200px;
+  margin-bottom: 1em;
+}
+
+.img-1 {
+  background: url("https://www.nutrire.ind.br/content/produtos/g/b0203dd0214c9bd4654429063014098e.png") no-repeat 50%;
+  background-size: cover;
+}
+
+.img-2 {
+  background: url("https://sutuvet.com/uploads/productos/big/seda-negra.png") no-repeat 50%;
+  background-size: cover;
+}
+
+.img-3 {
+  background: url("http://www.kyrovet.com/images/stories/virtuemart/product/resized/VENCOMAX-12OK_0x400.png") no-repeat 50%;
+  background-size: cover;
+}
+
+
+/* ---------EVENTOS---------- */
+
+.registro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  p {
+    margin: 2em;
+
+    a {
+      background-color: green;
+      font-size: 0.7em;
+      text-align: center;
+      padding: .7em 1em;
+      text-transform: uppercase;
+      color: rgb(246, 250, 246);
+      border-radius: .7em;
+      transition: all .5s ease;
+
+      a:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+}
+
+
+/* ---------CONTACTO---------- */
+
+.container-contacto {
+  height: auto;
+  min-height: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.container-contactacto_consultas {
+  padding: 1em;
+}
+
+
+.container-contacto_mapa {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+
+.mapa {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  a {
+    color: $blue;
+    width: fit-content;
+    border-bottom: 1px $blue;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: .8em;
+
+  label {
+    margin: 1em 0 .5em;
+
+    input {
+      padding: 1em .5em;
+      font-size: 1em;
+      height: 1.5em;
+
+      textarea {
+        padding: 1em .5em;
+        font-size: 1em;
+        resize: none;
+        width: 100%;
+        min-height: 100px;
+        max-height: 200px;
+      }
+    }
+  }
+}
+
+
+/* ------footer---------- */
+
+
+footer {
+  background-color: #060c1d;
+  padding: 18px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  color: white;
+
+  a {
+    margin-right: 1em;
+    color: whitesmoke;
+
+
+    p {
+      margin: 0;
+    }
+  }
+}

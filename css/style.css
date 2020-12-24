@@ -1,0 +1,482 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: montserrat;
+}
+
+main {
+  height: auto;
+  padding: 2em 2em;
+}
+
+h1 {
+  color: #0000;
+}
+
+h3 {
+  color: #088A08;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 1em;
+}
+
+.hero, .hero_eventos, .hero_catalogo {
+  width: 100%;
+  height: 350px;
+  min-width: 100%;
+  min-height: 350px;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+.hero a, .hero_eventos a, .hero_catalogo a {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.7em 0.7em;
+  margin: 0 3em;
+  border-radius: 0.6em;
+  letter-spacing: 0.1em;
+}
+
+.hero-txt p {
+  font-size: 1.5em;
+  color: black;
+  margin-bottom: 1.5em;
+}
+
+.hero-buttoms {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero::before, .hero_eventos::before, .hero_catalogo::before {
+  background: url("https://www.adiestramientocaninos.com/wp-content/uploads/2017/11/veterinarias-bogota-facebook.jpg") no-repeat 50%;
+  background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 350px;
+  width: 100%;
+  z-index: -2;
+  opacity: 0.4;
+}
+
+.hero-txt {
+  text-align: center;
+}
+.hero-txt h1 {
+  color: #070566;
+  font-size: 3em;
+  margin-bottom: 0.2em;
+}
+
+.cta-pri {
+  color: white;
+  background: green;
+  border: 1px solid green;
+}
+
+.cta-sec {
+  color: #070566;
+  background: white;
+  border: 1px solid #070566;
+}
+
+.cta-sec:hover {
+  color: white;
+  background: #070566;
+  border: 1px solidrgb(7, 5, 102);
+}
+
+.hero_catalogo::before {
+  background: url("https://i.pinimg.com/736x/f6/f2/8e/f6f28ee884cefac10b3b84a522e63ba0.jpg") no-repeat 50%;
+  background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width: 100%;
+  z-index: -2;
+  opacity: 0.4;
+}
+
+.hero_eventos::before {
+  background: url("https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?cs=srgb&dl=pexels-picjumbocom-461077.jpg&fm=jpg") no-repeat 50%;
+  background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width: 100%;
+  z-index: -2;
+  opacity: 0.4;
+}
+
+.hero_eventos-txt {
+  text-align: center;
+}
+.hero_eventos-txt h1 {
+  color: #070566;
+  font-size: 3em;
+  margin-bottom: 0.2em;
+}
+
+.eventos_link a {
+  color: white;
+  background: green;
+  border: 1px solid green;
+}
+
+/* --------- Galería Nuestras marcas---------- */
+.galeria_marcas {
+  padding: 0.7em 0.7em;
+}
+.galeria_marcas h2 {
+  text-align: left;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.galeria_marcas-grid {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2em;
+}
+
+/* ---------CATÁLOGO---------- */
+.cabecera_catalogo {
+  padding: 4rem;
+  text-align: end;
+}
+
+.hero-txt h2 {
+  color: #070000;
+}
+
+.galeria_productos {
+  padding: 0.5em 0.5em;
+}
+.galeria_productos h2 {
+  text-align: left;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.galeria_productos h2 a {
+  margin-left: 10px;
+}
+
+.galeria_productos-grid {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2em;
+}
+
+.galeria_productos-nota {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------PROMOCIONES --------- */
+.container_card {
+  height: auto;
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.card {
+  background: #c4c9c4;
+  height: auto;
+  width: 300px;
+  padding: 4em;
+  text-align: center;
+  border-radius: 0.7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: all 0.5s ease;
+}
+.card p {
+  color: black;
+  font-size: 1.5em;
+}
+.card p span {
+  display: block;
+  font-size: 2em;
+  color: red;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 38px 5px rgba(0, 0, 0, 0.75);
+}
+
+.card_img {
+  border-radius: 0.5em;
+  background: red;
+  height: 200px;
+  margin-bottom: 1em;
+}
+
+.img-1 {
+  background: url("https://www.nutrire.ind.br/content/produtos/g/b0203dd0214c9bd4654429063014098e.png") no-repeat 50%;
+  background-size: cover;
+}
+
+.img-2 {
+  background: url("https://sutuvet.com/uploads/productos/big/seda-negra.png") no-repeat 50%;
+  background-size: cover;
+}
+
+.img-3 {
+  background: url("http://www.kyrovet.com/images/stories/virtuemart/product/resized/VENCOMAX-12OK_0x400.png") no-repeat 50%;
+  background-size: cover;
+}
+
+/* ---------EVENTOS---------- */
+.registro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.registro p {
+  margin: 2em;
+}
+.registro p a {
+  background-color: green;
+  font-size: 0.7em;
+  text-align: center;
+  padding: 0.7em 1em;
+  text-transform: uppercase;
+  color: #f6faf6;
+  border-radius: 0.7em;
+  transition: all 0.5s ease;
+}
+.registro p a a:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.75);
+}
+
+/* ---------CONTACTO---------- */
+.container-contacto {
+  height: auto;
+  min-height: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container-contactacto_consultas {
+  padding: 1em;
+}
+
+.container-contacto_mapa {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.mapa {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mapa a {
+  color: #1b0666;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 1px #1b0666;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8em;
+}
+form label {
+  margin: 1em 0 0.5em;
+}
+form label input {
+  padding: 1em 0.5em;
+  font-size: 1em;
+  height: 1.5em;
+}
+form label input textarea {
+  padding: 1em 0.5em;
+  font-size: 1em;
+  resize: none;
+  width: 100%;
+  min-height: 100px;
+  max-height: 200px;
+}
+
+/* ------footer---------- */
+footer {
+  background-color: #060c1d;
+  padding: 18px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  color: white;
+}
+footer a {
+  margin-right: 1em;
+  color: whitesmoke;
+}
+footer a p {
+  margin: 0;
+}
+
+nav {
+  background: #1b0666;
+  height: 80px;
+  width: 100%;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+label.logo {
+  color: white;
+  font-size: 20px;
+  line-height: 80px;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+a.active,
+a:hover {
+  background: #5176f0;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  label.logo {
+    font-size: 25px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 25px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #2c3e50;
+  top: 80px;
+  left: -100%;
+  text-align: center;
+  transition: all 0.5s;
+}
+ul li {
+  display: block;
+  margin: 50px 0;
+  line-height: 30px;
+}
+ul li a {
+  font-size: 20px;
+}
+
+a:hover,
+a.active {
+  background: none;
+  color: #5176f0;
+}
+
+#check:checked ~ ul {
+  left: 0;
+}
