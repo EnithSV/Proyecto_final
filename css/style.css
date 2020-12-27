@@ -59,7 +59,7 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   padding: 0.7em 0.7em;
-  margin: 0 3em;
+  margin: 0.8em 1em;
   border-radius: 0.6em;
   letter-spacing: 0.1em;
 }
@@ -159,6 +159,54 @@ p {
   border: 1px solid green;
 }
 
+@media (max-width: 667px) {
+  .hero, .hero_catalogo, .hero_eventos {
+    width: 100%;
+    height: 350px;
+    min-width: 100%;
+    min-height: 350px;
+    position: relative;
+    display: grid;
+    flex-wrap: wrap;
+    place-content: center;
+  }
+  .hero a, .hero_catalogo a, .hero_eventos a {
+    font-size: 0.7em;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0.5em 0.5em;
+    margin: 3em 3em;
+    border-radius: 0.6em;
+    letter-spacing: 0.1em;
+  }
+}
+.hero-txt {
+  text-align: center;
+}
+.hero-txt h1 {
+  color: #070566;
+  font-size: 2em;
+  margin-bottom: 0.2em;
+}
+
+.hero-txt p {
+  font-size: 1em;
+  color: black;
+  margin-bottom: 1.5em;
+}
+
+.cta-pri {
+  color: white;
+  background: green;
+  border: 1px solid green;
+}
+
+.cta-sec {
+  color: #070566;
+  background: white;
+  border: 1px solid #070566;
+}
+
 /* --------- Galería Nuestras marcas---------- */
 .galeria_marcas {
   padding: 0.7em 0.7em;
@@ -211,11 +259,11 @@ p {
   gap: 2em;
 }
 
-.galeria_productos-nota {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.subir {
+  color: #088A08;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 
 /* ------------PROMOCIONES --------- */
@@ -364,8 +412,7 @@ footer {
   padding: 18px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: left;
+  justify-content: flex-end;
   color: white;
 }
 footer a {
@@ -381,102 +428,62 @@ nav {
   height: 80px;
   width: 100%;
 }
+nav h1 {
+  color: white;
+}
 nav ul {
   float: right;
   margin-right: 20px;
 }
-nav ul li {
+nav li {
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
-nav ul li a {
+nav li a {
   color: white;
   font-size: 17px;
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
 }
-
-label.logo {
-  color: white;
-  font-size: 20px;
-  line-height: 80px;
-  padding: 0 10px;
-  font-weight: bold;
-}
-
-a.active,
-a:hover {
-  background: #5176f0;
+nav li a.active,
+nav li a:hover {
+  background: white;
+  color: black;
   transition: 0.5s;
 }
 
-.checkbtn {
-  font-size: 30px;
-  color: white;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
-}
-
-#check {
-  display: none;
-}
-
-@media (max-width: 1200px) {
-  label.logo {
-    font-size: 25px;
-    padding-left: 50px;
-  }
-
-  nav ul li a {
-    font-size: 16px;
-  }
-}
 @media (max-width: 952px) {
-  label.logo {
-    font-size: 25px;
-    padding-left: 50px;
-  }
-
   nav ul li a {
-    font-size: 16px;
+    font-size: 0.5em;
   }
 }
 @media (max-width: 858px) {
-  .checkbtn {
-    display: block;
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
   }
-}
-ul {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #2c3e50;
-  top: 80px;
-  left: -100%;
-  text-align: center;
-  transition: all 0.5s;
-}
-ul li {
-  display: block;
-  margin: 50px 0;
-  line-height: 30px;
-}
-ul li a {
-  font-size: 20px;
-}
 
-a:hover,
-a.active {
-  background: none;
-  color: #5176f0;
-}
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
 
-#check:checked ~ ul {
-  left: 0;
+  nav ul li a {
+    font-size: 20px;
+    display: none;
+  }
+
+  a:hover, a.active {
+    background: none;
+    color: #0082e6;
+  }
 }

@@ -58,13 +58,13 @@
 }
 
 
-.galeria_productos-nota {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-}
+.subir {
+    color: $green;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+   
+  }
 
 
 /* ------------PROMOCIONES --------- */
@@ -234,8 +234,8 @@ footer {
   padding: 18px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: left;
+  
+  justify-content: flex-end;
   color: white;
 
   a {
