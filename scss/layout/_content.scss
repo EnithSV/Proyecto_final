@@ -1,24 +1,25 @@
 /* --------- Galería Nuestras marcas---------- */
 
 .galeria_marcas {
-  padding: 0.7em 0.7em;
+  padding: 0.1rem 0.1rem;
+  margin-top: 0.1rem;
 
   h2 {
     text-align: left;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 0;
+    margin-bottom: 2rem;
 
   }
-}
 
-.galeria_marcas-grid {
-  width: 90%;
-  max-width: 1500px;
-  margin: 0 auto;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2em;
+  .galeria_marcas-grid {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+    gap: 2rem;
+  }
 }
 
 
@@ -45,31 +46,35 @@
       margin-left: 10px;
     }
   }
-}
 
-.galeria_productos-grid {
-  width: 90%;
-  max-width: 1500px;
-  margin: 0 auto;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2em;
+  .galeria_productos-grid {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+  }
 }
 
 
 .subir {
-    color: $green;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-   
-  }
+  color: $green;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+}
 
 
 /* ------------PROMOCIONES --------- */
-.container_card {
 
+h2 {
+  margin-bottom: 1.2em;
+}
+
+.container_card {
   height: auto;
   width: 80%;
   max-width: 1100px;
@@ -77,62 +82,73 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-}
-
-.card {
-  background: rgb(196, 201, 196);
-  height: auto;
-  width: 300px;
-  padding: 4em;
-  text-align: center;
-  border-radius: .7em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  transition: all .5s ease;
 
 
-  p {
-    color: black;
-    font-size: 1.5em;
+  .card {
+    background: rgb(196, 201, 196);
+    height: auto;
+    width: 300px;
+    padding: 4em;
+    text-align: center;
+    border-radius: .7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all .5s ease;
 
-    span {
-      display: block;
-      font-size: 2em;
-      color: red;
+
+    p {
+      color: black;
+      font-size: 1.5em;
+
+      span {
+        display: block;
+        font-size: 2em;
+        color: red;
+      }
     }
+  }
+
+
+  .card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 38px 5px rgba(0, 0, 0, 0.75);
+  }
+
+  .card_img {
+    border-radius: .5em;
+    background: red;
+    height: 200px;
+    margin-bottom: 1em;
+  }
+
+  .img-1 {
+    background: url("https://www.nutrire.ind.br/content/produtos/g/b0203dd0214c9bd4654429063014098e.png") no-repeat 50%;
+    background-size: cover;
+  }
+
+  .img-2 {
+    background: url("https://bodegaveterinaria.com/sitio/wp-content/uploads/2020/11/Suturas_Sutuvet_BodegaVeterinaria-300x300.png") no-repeat 50%;
+    background-size: cover;
+  }
+
+  .img-3 {
+    background: url("http://www.kyrovet.com/images/stories/virtuemart/product/resized/VENCOMAX-12OK_0x400.png") no-repeat 50%;
+    background-size: cover;
   }
 }
 
 
+@media (max-width: 858px) {
 
-.card:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 10px 38px 5px rgba(0, 0, 0, 0.75);
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  .card {
+    margin: 1.5em;
+  }
 }
-
-.card_img {
-  border-radius: .5em;
-  background: red;
-  height: 200px;
-  margin-bottom: 1em;
-}
-
-.img-1 {
-  background: url("https://www.nutrire.ind.br/content/produtos/g/b0203dd0214c9bd4654429063014098e.png") no-repeat 50%;
-  background-size: cover;
-}
-
-.img-2 {
-  background: url("https://sutuvet.com/uploads/productos/big/seda-negra.png") no-repeat 50%;
-  background-size: cover;
-}
-
-.img-3 {
-  background: url("http://www.kyrovet.com/images/stories/virtuemart/product/resized/VENCOMAX-12OK_0x400.png") no-repeat 50%;
-  background-size: cover;
-}
-
 
 /* ---------EVENTOS---------- */
 
@@ -153,14 +169,15 @@
       color: rgb(246, 250, 246);
       border-radius: .7em;
       transition: all .5s ease;
+    }
 
-      a:hover {
-        transform: scale(1.1);
-        box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.75);
-      }
+    a:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.75);
     }
   }
 }
+
 
 
 /* ---------CONTACTO---------- */
@@ -172,31 +189,30 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-}
 
 
-.container-contactacto_consultas {
-  padding: 1em;
-}
+  .container-contacto_mapa {
+    display: flex;
+    flex-direction: column;
 
+    a {
+      width: fit-content;
+      border-bottom: 1px;
+      margin: 0.5em;
+    }
 
-.container-contacto_mapa {
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
-}
+    p {
+      margin: 0.5em;
+    }
 
+    .map {
+      margin: 0.5em;
+    }
+  }
 
-.mapa {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  .container-contactacto_consultas {
+    padding: 1em;
 
-  a {
-    color: $blue;
-    width: fit-content;
-    border-bottom: 1px $blue;
   }
 }
 
@@ -234,7 +250,7 @@ footer {
   padding: 18px;
   display: flex;
   flex-direction: row;
-  
+
   justify-content: flex-end;
   color: white;
 
@@ -245,6 +261,125 @@ footer {
 
     p {
       margin: 0;
+    }
+  }
+}
+
+
+
+@media (max-width: 810px) {
+
+
+  /*----index----*/
+
+  .galeria_marcas {
+    padding: 0;
+    margin-top: 0.1rem;
+
+  }
+
+  /*----promociones----*/
+
+  .card {
+    background: rgb(196, 201, 196);
+    height: auto;
+    width: 400px;
+    padding: 4rem;
+    text-align: center;
+    border-radius: .7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all .5s ease;
+
+    p {
+      color: black;
+      font-size: 0.3rem;
+
+
+      span {
+        display: block;
+        font-size: 0.1rem;
+        color: red;
+
+      }
+    }
+  }
+
+  /*----contacto----*/
+
+  .container-contacto {
+    height: auto;
+    min-height: 700px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    .container-contacto_mapa {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: rem;
+
+      h2 {
+        margin-left: 1rem;
+      }
+
+
+      a {
+        width: fit-content;
+        border-bottom: 1px;
+        margin-left: 1rem;
+
+      }
+
+      p {
+        margin: 1rem;
+      }
+
+      .map {
+        margin: 0.5em;
+        width: 300px;
+        height: 300px;
+      }
+
+    }
+
+    .container-contacto_consultas {
+
+      padding-top: 0.3rem;
+      padding-bottom: 2rem;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        font-size: .8em;
+
+        label {
+          margin: 1em 0 .5em;
+
+          input {
+            padding: 1em .5em;
+            font-size: 1em;
+            height: 1.5em;
+
+            textarea {
+              padding: 1em .5em;
+              font-size: 1em;
+              resize: none;
+              width: 100%;
+              height: 80%;
+              min-height: 100px;
+              max-height: 500px;
+            }
+          }
+        }
+      }
     }
   }
 }
