@@ -12,98 +12,114 @@
 </head>
 
 <body>
+  
+  <div class="contenedor" id="top">
+    <a href="#menu" class="menu"><span class="iconify" data-icon="heroicons-outline:menu" data-inline="false"></span>
+    </a>
+    <nav id="menu">
 
-    <div class="contenedor">
-      <a href="#menu" class="menu"><span class="iconify" data-icon="heroicons-outline:menu" data-inline="false"></span>
-      </a>
-      <nav id="menu">
-        
-        <ul>
-          <li><a href="index.html">Nuestras marcas</a></li>
-          <li><a class="active" href="catalogo.html">Catálogo</a></li>
-          <li><a href="promociones.html">Promociones</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+      <ul >
+        <li><a href="index.html">Nuestras marcas</a></li>
+        <li><a class="active" href="catalogo.html">Catálogo</a></li>
+        <li><a href="promociones.html">Promociones</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <header class="hero_catalogo">
+    <div class="hero-txt">
+      <img src="img/logo_4.png" height="60" width="90">
+      <h1>Todo lo que necesitas en un solo lugar</h1>
+
+    </div>
+  </header>
+
+
+  <section class="galeria_productos">
+
+    <div class="indice_catalogo">
+
+      <a href="#farma" class="card-catalogo"><span class="iconify" data-icon="ic:outline-local-pharmacy"
+          data-inline="false" data-width="40" data-height="40"></span> Fármacos</a>
+      <p>Antibióticos, antiinflamatótios, analgésicos, suplementos alimenticios</p>
+      <a href="#vac" class="card-catalogo"><span class="iconify" data-icon="bx:bx-calendar" data-inline="false"
+          data-width="40" data-height="40"></span> Vacunas</a>
+      <p>Calendario completo de vacunas para perros y gatos: Hepatitis vírica, Leptospirosis, Parvovirus, Herpesvirus,
+        Rabia</p>
+
+      <a href="#anti" class="card-catalogo"><span class="iconify" data-icon="cil:dog" data-inline="false"
+          data-width="40" data-height="40"></span> Antiparasitarios</a>
+      <p>Fármacos indicados para la prevención y tratamiento de parásitos internos y/o externos en animales de compañía
+        y animales de producción.</p>
+
     </div>
 
-    <header class="hero_catalogo">
-      <div class="hero-txt">
-        <h1>Encuentra todo lo que necesitas</h1>
-        <h1>AQUÍ</h1>
-        <a href="#aqui"><span class="iconify" data-icon="bx:bx-down-arrow" data-inline="false" data-width="60px"
-            data-height="60px"></span></a>
-      </div>
-    </header>
+    <h2 id="farma">Fármacos</h2>
+    <div class="galeria_productos-grid">
+      <img alt="Fripets tabletas" src="img/farm_1.jpeg" height="300" width="300">
+      <img alt="Fripets ats"src="img/farm_2.jpeg" height="300" width="300">
+      <img alt="Meloxisan Pets"src="img/farm_3.jpeg" height="300" width="300">
+      <img alt="Fripets ótico"src="img/farm_4.jpeg" height="300" width="300">
+      <img alt="Flora"src="img/farm_5.jpeg" height="300" width="300">
+      
+    </div>
+
+    <h2 id="vac">Vacunas</h2>
+    <div class="galeria_productos-grid">
+      <img alt="Rabia canis"src="img/vac_1.jpeg" height="300" width="300">
+      <img alt="Ronvac"src="img/vac_2.jpeg" height="300" width="300">
+      <img alt="Vencomax"src="img/vac_3.jpeg" height="300" width="300">
+    </div>
+
+    <h2 id="anti">Antiparasitarios</h2>
+    <div class="galeria_productos-grid">
+      <img alt="Revolta6"src="img/ant_1.jpeg" height="300" width="300">
+      <img alt="Telopar"src="img/ant_2.jpeg" height="300" width="300">
+      <img alt="Revolta12"src="img/ant_3.jpeg" height="300" width="300">
+    </div>
+
+    </div>
+
+    <button class="regresar"></button>
+    <a class="subir" href="#top"><span class="iconify" data-icon="bi:arrow-up-circle-fill" data-inline="false"
+        data-width="50" data-height="50"></span></a>
+
+  </section>
+
+  <footer>
+
+    <div>
+      <h3>Contacto</h3>
+      <p>947216195</p>
+      <a href="mailto:contacto@continentalvet.pe">contacto@contivet.pe</a>
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/inversionescontivet"> <span class="iconify"
+              data-icon="ant-design:facebook-outlined" data-inline="false"></span> Facebook</a>
+        </li>
+
+        <li>
+          <a href="https://www.instagram.com/""> <span class=" iconify" data-icon="feather:instagram"
+            data-inline="false"></span> Instagram</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div>
+      <h3>Ubícanos</h3>
+      <p>Pasaje San Luis 345</p>
+      <p>Urb. Villa Linda</p>
+      <p>San Miguel</p>
+      <p>Lima, Peru</p>
+    </div>
+
+  </footer>
 
 
-    <section class="galeria_productos" id="top">
-
-      <h2 id="aqui">Farmacéuticos</h2>
-      <div class="galeria_productos-grid">
-        <img src="img/farm_1.jpeg" height="300" width="300">
-        <img src="img/farm_2.jpeg" height="300" width="300">
-        <img src="img/farm_3.jpeg" height="300" width="300">
-        <img src="img/farm_4.jpeg" height="300" width="300">
-        <img src="img/farm_5.jpeg" height="300" width="300">
-        <img src="img/farm_6.jpeg" height="300" width="300">
-
-      </div>
-
-      <h2>Vacunas</h2>
-      <div class="galeria_productos-grid">
-        <img src="img/vac_1.jpeg" height="300" width="300">
-        <img src="img/vac_2.jpeg" height="300" width="300">
-        <img src="img/vac_3.jpeg" height="300" width="300">
-      </div>
-
-      <h2>Antiparasitarios</h2>
-      <div class="galeria_productos-grid">
-        <img src="img/ant_1.jpeg" height="300" width="300">
-        <img src="img/ant_2.jpeg" height="300" width="300">
-        <img src="img/ant_3.jpeg" height="300" width="300">
-      </div>
-
-      </div>
-
-      <button class="regresar"></button>
-      <a class="subir" href="#top"><span class="iconify" data-icon="bi:arrow-up-circle-fill" data-inline="false" data-width="50"
-          data-height="50"></span></a>
-
-    </section>
-
-    <footer>
-
-      <div>
-        <h3>Contacto</h3>
-        <p>947216195</p>
-        <a href="mailto:contacto@continentalvet.pe">contacto@continentalvet.pe</a>
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/inversionescontivet"><span class="iconify"
-                data-icon="ant-design:facebook-outlined" data-inline="false"></span> Facebook</a>
-          </li>
-
-          <li>
-            <a href="https://www.instagram.com/""><span class=" iconify" data-icon="feather:instagram"
-              data-inline="false"></span> Instagram</a>
-          </li>
-        </ul>
-
-      </div>
-
-      <div>
-        <h3>Ubícanos</h3>
-        <p>Pasaje San Luis 345</p>
-        <p>Urb. Villa Linda</p>
-        <p>San Miguel</p>
-        <p>Lima, Peru</p>
-      </div>
-
-    </footer>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
 </body>
 

@@ -17,6 +17,10 @@ main {
   padding: 2em 2em;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   color: #0000;
 }
@@ -30,21 +34,42 @@ html {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 p {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
+@media (max-width: 810px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  a {
+    font-size: 0.8rem;
+  }
+}
 /*hero index*/
 .hero, .hero_eventos, .hero_catalogo {
   width: 100%;
@@ -69,13 +94,13 @@ p {
 }
 .hero .hero-txt h1, .hero_eventos .hero-txt h1, .hero_catalogo .hero-txt h1 {
   color: #070566;
-  font-size: 3em;
-  margin-bottom: 0.2em;
+  font-size: 3rem;
+  margin-bottom: 0.2rem;
 }
 .hero .hero-txt p, .hero_eventos .hero-txt p, .hero_catalogo .hero-txt p {
   font-size: 1.5em;
   color: black;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 .hero .hero-buttoms, .hero_eventos .hero-buttoms, .hero_catalogo .hero-buttoms {
   display: flex;
@@ -94,7 +119,7 @@ p {
 .hero .hero-buttoms .cta-sec:hover, .hero_eventos .hero-buttoms .cta-sec:hover, .hero_catalogo .hero-buttoms .cta-sec:hover {
   color: white;
   background: #070566;
-  border: 1px solidrgb(7, 5, 102);
+  border: 1px solid #070566;
 }
 
 .hero::before, .hero_eventos::before, .hero_catalogo::before {
@@ -112,9 +137,15 @@ p {
 }
 
 /*hero catálogo*/
+.hero_catalogo {
+  height: 300px;
+  min-height: 300px;
+}
+
 .hero_catalogo::before {
   background: url("https://i.pinimg.com/736x/f6/f2/8e/f6f28ee884cefac10b3b84a522e63ba0.jpg") no-repeat 50%;
   background-size: cover;
+  height: 300px;
 }
 
 /*hero eventos*/
@@ -123,71 +154,68 @@ p {
 }
 .hero_eventos .hero_eventos-txt h1 {
   color: #070566;
-  font-size: 3em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.2rem;
 }
-
-.hero_eventos::before {
+.hero_eventos .hero_eventos-txt .hero-registro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.hero_eventos .hero_eventos-txt .hero-registro .eventos_link {
+  color: white;
+  background: green;
+  border: 1px solid green;
+}
+.hero_eventos .hero_eventos::before {
   background: url("https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?cs=srgb&dl=pexels-picjumbocom-461077.jpg&fm=jpg") no-repeat 50%;
   background-size: cover;
   height: 400px;
 }
 
-.eventos_link a {
-  color: white;
-  background: green;
-  border: 1px solid green;
-}
-
 @media (max-width: 810px) {
-  .hero, .hero_catalogo, .hero_eventos {
-    width: 100%;
-    height: 250px;
-    min-width: 100%;
-    min-height: 300px;
-    position: relative;
-    display: grid;
-    place-content: center;
-  }
+  /*hero index*/
   .hero a, .hero_catalogo a, .hero_eventos a {
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-transform: uppercase;
     padding: 0.5rem 1rem;
     margin: 1rem 1rem;
-    border-radius: 0.6rem;
-    letter-spacing: 0.1rem;
   }
   .hero .hero-txt, .hero_catalogo .hero-txt, .hero_eventos .hero-txt {
     text-align: center;
   }
   .hero .hero-txt h1, .hero_catalogo .hero-txt h1, .hero_eventos .hero-txt h1 {
-    font-size: 2em;
-    margin-bottom: 0.2em;
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
   }
-  .hero .hero-txt .hero-txt p, .hero_catalogo .hero-txt .hero-txt p, .hero_eventos .hero-txt .hero-txt p {
-    font-size: 1em;
-    margin-bottom: 1.5em;
-  }
-
-  .hero-buttoms {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  .hero .hero-txt p, .hero_catalogo .hero-txt p, .hero_eventos .hero-txt p {
+    font-size: 1.3rem;
   }
 
-  .hero::before, .hero_catalogo::before, .hero_eventos::before {
-    background: url("https://www.adiestramientocaninos.com/wp-content/uploads/2017/11/veterinarias-bogota-facebook.jpg") no-repeat 50%;
-    background-size: cover;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 300px;
+  /*hero catálogo*/
+  .hero_catalogo {
     width: 100%;
-    z-index: -2;
-    opacity: 0.4;
+    height: 250px;
+    min-width: 100%;
+    min-height: 250px;
+  }
+
+  .hero_catalogo::before {
+    background: url("https://i.pinimg.com/736x/f6/f2/8e/f6f28ee884cefac10b3b84a522e63ba0.jpg") no-repeat 50%;
+    background-size: cover;
+    height: 250px;
+  }
+
+  /*hero eventos*/
+  .hero_eventos .hero_eventos-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero_eventos h1 {
+    margin: 0.9rem;
+  }
+  .hero_eventos .eventos_link {
+    color: white;
+    background: green;
+    border: 1px solid green;
   }
 
   .hero_eventos::before {
@@ -226,13 +254,31 @@ p {
   color: #070000;
 }
 
+.indice_catalogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.indice_catalogo .card-catalogo {
+  margin-bottom: 0.5rem;
+}
+.indice_catalogo p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+.indice_catalogo a {
+  font-size: 1.1rem;
+  color: #088A08;
+}
+
 .galeria_productos {
-  padding: 0.5em 0.5em;
+  padding: 0.5rem 0.5rem;
 }
 .galeria_productos h2 {
   text-align: left;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .galeria_productos h2 a {
   margin-left: 10px;
@@ -244,7 +290,7 @@ p {
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2em;
+  gap: 2rem;
 }
 
 .subir {
@@ -256,12 +302,12 @@ p {
 
 /* ------------PROMOCIONES --------- */
 h2 {
-  margin-bottom: 1.2em;
+  margin-bottom: 1.2rem;
 }
 
 .container_card {
   height: auto;
-  width: 80%;
+  width: 90%;
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
@@ -272,9 +318,10 @@ h2 {
   background: #c4c9c4;
   height: auto;
   width: 300px;
-  padding: 4em;
+  padding: 2.5rem;
+  margin: 2rem;
   text-align: center;
-  border-radius: 0.7em;
+  border-radius: 0.7rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -282,11 +329,11 @@ h2 {
 }
 .container_card .card p {
   color: black;
-  font-size: 1.5em;
+  font-size: 1rem;
 }
 .container_card .card p span {
   display: block;
-  font-size: 2em;
+  font-size: 2rem;
   color: red;
 }
 .container_card .card:hover {
@@ -294,10 +341,10 @@ h2 {
   box-shadow: 0px 10px 38px 5px rgba(0, 0, 0, 0.75);
 }
 .container_card .card_img {
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
   background: red;
   height: 200px;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 .container_card .img-1 {
   background: url("https://www.nutrire.ind.br/content/produtos/g/b0203dd0214c9bd4654429063014098e.png") no-repeat 50%;
@@ -312,35 +359,26 @@ h2 {
   background-size: cover;
 }
 
-@media (max-width: 858px) {
-  h2 {
-    margin-bottom: 1em;
-  }
-
-  .card {
-    margin: 1.5em;
-  }
-}
 /* ---------EVENTOS---------- */
-.registro {
+.eventos_link {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.registro p {
-  margin: 2em;
+.eventos_link p {
+  margin: 2rem;
 }
-.registro p a {
+.eventos_link a {
   background-color: green;
-  font-size: 0.7em;
+  font-size: 0.7rem;
   text-align: center;
-  padding: 0.7em 1em;
+  padding: 0.7rem 1rem;
   text-transform: uppercase;
   color: #f6faf6;
-  border-radius: 0.7em;
+  border-radius: 0.7rem;
   transition: all 0.5s ease;
 }
-.registro p a:hover {
+.eventos_link a:hover {
   transform: scale(1.1);
   box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.75);
 }
@@ -363,34 +401,34 @@ h2 {
   width: -moz-fit-content;
   width: fit-content;
   border-bottom: 1px;
-  margin: 0.5em;
+  margin: 0.5rem;
 }
 .container-contacto .container-contacto_mapa p {
-  margin: 0.5em;
+  margin: 0.5rem;
 }
 .container-contacto .container-contacto_mapa .map {
-  margin: 0.5em;
+  margin: 0.5rem;
 }
 .container-contacto .container-contactacto_consultas {
-  padding: 1em;
+  padding: 1rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 form label {
-  margin: 1em 0 0.5em;
+  margin: 1rem 0 0.5rem;
 }
 form label input {
-  padding: 1em 0.5em;
-  font-size: 1em;
-  height: 1.5em;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  height: 1.5rem;
 }
 form label input textarea {
-  padding: 1em 0.5em;
-  font-size: 1em;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
   resize: none;
   width: 100%;
   min-height: 100px;
@@ -416,34 +454,19 @@ footer a p {
 
 @media (max-width: 810px) {
   /*----index----*/
-  .galeria_marcas {
-    padding: 0;
-    margin-top: 0.1rem;
+  /*----catálogo----*/
+  .indice_catalogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .indice_catalogo p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
   }
 
   /*----promociones----*/
-  .card {
-    background: #c4c9c4;
-    height: auto;
-    width: 400px;
-    padding: 4rem;
-    text-align: center;
-    border-radius: 0.7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    transition: all 0.5s ease;
-  }
-  .card p {
-    color: black;
-    font-size: 0.3rem;
-  }
-  .card p span {
-    display: block;
-    font-size: 0.1rem;
-    color: red;
-  }
-
+  /*----eventos----*/
   /*----contacto----*/
   .container-contacto {
     height: auto;
@@ -453,17 +476,8 @@ footer a p {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .container-contacto h2 {
-    font-size: 1rem;
-  }
-  .container-contacto .container-contacto_mapa {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: rem;
-  }
   .container-contacto .container-contacto_mapa h2 {
-    margin-left: 1rem;
+    margin-left: 3.5rem;
   }
   .container-contacto .container-contacto_mapa a {
     width: -webkit-fit-content;
@@ -480,35 +494,30 @@ footer a p {
     width: 300px;
     height: 300px;
   }
-  .container-contacto .container-contacto_consultas {
-    padding-top: 0.3rem;
+
+  .container-contacto_consultas {
     padding-bottom: 2rem;
   }
-  .container-contacto .container-contacto_consultas form {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.8em;
-  }
-  .container-contacto .container-contacto_consultas form label {
-    margin: 1em 0 0.5em;
-  }
-  .container-contacto .container-contacto_consultas form label input {
-    padding: 1em 0.5em;
-    font-size: 1em;
-    height: 1.5em;
-  }
-  .container-contacto .container-contacto_consultas form label input textarea {
-    padding: 1em 0.5em;
-    font-size: 1em;
-    resize: none;
-    width: 100%;
-    height: 80%;
-    min-height: 100px;
-    max-height: 500px;
-  }
 }
+/*----footer----*/
+footer {
+  background-color: #060c1d;
+  padding: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: white;
+}
+footer a {
+  margin-right: 1em;
+  color: whitesmoke;
+}
+footer a p {
+  margin: 0;
+}
+
 nav {
-  background: #1b0666;
+  background: #1a0764;
   height: 70px;
   width: 100%;
 }
@@ -547,7 +556,7 @@ nav li a:hover {
 
 @media (max-width: 810px) {
   .contenedor {
-    background: #1b0666;
+    background: #1a0764;
     padding: 0.3rem 0;
     display: flex;
     justify-content: space-between;
