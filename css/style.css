@@ -22,11 +22,11 @@ html {
 }
 
 h1 {
-  color: #0000;
+  color: #2e1a7e;
 }
 
 h3 {
-  color: #088A08;
+  color: #07ac07;
 }
 
 html {
@@ -93,7 +93,7 @@ p {
   text-align: center;
 }
 .hero .hero-txt h1, .hero_eventos .hero-txt h1, .hero_catalogo .hero-txt h1 {
-  color: #070566;
+  color: #2e1a7e;
   font-size: 3rem;
   margin-bottom: 0.2rem;
 }
@@ -108,18 +108,23 @@ p {
 }
 .hero .hero-buttoms .cta-pri, .hero_eventos .hero-buttoms .cta-pri, .hero_catalogo .hero-buttoms .cta-pri {
   color: white;
-  background: green;
-  border: 1px solid green;
+  background: #07ac07;
+  border: 1px solid #07ac07;
 }
 .hero .hero-buttoms .cta-sec, .hero_eventos .hero-buttoms .cta-sec, .hero_catalogo .hero-buttoms .cta-sec {
-  color: #070566;
-  background: white;
-  border: 1px solid #070566;
+  color: #2e1a7e;
+  background: #fff;
+  border: 1px solid #2e1a7e;
 }
-.hero .hero-buttoms .cta-sec:hover, .hero_eventos .hero-buttoms .cta-sec:hover, .hero_catalogo .hero-buttoms .cta-sec:hover {
+.hero .cta-sec:hover, .hero_eventos .cta-sec:hover, .hero_catalogo .cta-sec:hover {
   color: white;
-  background: #070566;
-  border: 1px solid #070566;
+  background: #2e1a7e;
+  border: 1px solid #2e1a7e;
+}
+.hero .cta-pri:hover, .hero_eventos .cta-pri:hover, .hero_catalogo .cta-pri:hover {
+  color: white;
+  background: #2e1a7e;
+  border: 1px solid #2e1a7e;
 }
 
 .hero::before, .hero_eventos::before, .hero_catalogo::before {
@@ -149,27 +154,16 @@ p {
 }
 
 /*hero eventos*/
-.hero_eventos .hero_eventos-txt {
-  text-align: center;
+.hero_eventos {
+  height: 300px;
+  min-height: 300px;
 }
-.hero_eventos .hero_eventos-txt h1 {
-  color: #070566;
-  margin-bottom: 0.2rem;
-}
-.hero_eventos .hero_eventos-txt .hero-registro {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.hero_eventos .hero_eventos-txt .hero-registro .eventos_link {
-  color: white;
-  background: green;
-  border: 1px solid green;
-}
-.hero_eventos .hero_eventos::before {
+
+.hero_eventos::before {
   background: url("https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?cs=srgb&dl=pexels-picjumbocom-461077.jpg&fm=jpg") no-repeat 50%;
   background-size: cover;
-  height: 400px;
+  height: 300px;
+  opacity: 1;
 }
 
 @media (max-width: 810px) {
@@ -204,6 +198,10 @@ p {
   }
 
   /*hero eventos*/
+  .hero_eventos {
+    min-height: 250px;
+    max-height: 250px;
+  }
   .hero_eventos .hero_eventos-txt {
     display: flex;
     flex-direction: column;
@@ -213,18 +211,18 @@ p {
     margin: 0.9rem;
   }
   .hero_eventos .eventos_link {
-    color: white;
-    background: green;
-    border: 1px solid green;
+    color: #fff;
+    background: #07ac07;
+    border: 1px solid #07ac07;
   }
 
   .hero_eventos::before {
     background: url("https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?cs=srgb&dl=pexels-picjumbocom-461077.jpg&fm=jpg") no-repeat 50%;
     background-size: cover;
-    height: 400px;
+    height: 250px;
   }
 }
-/* --------- Galería Nuestras marcas---------- */
+/* --------- INDEX---------- */
 .galeria_marcas {
   padding: 0.1rem 0.1rem;
   margin-top: 0.1rem;
@@ -269,7 +267,7 @@ p {
 }
 .indice_catalogo a {
   font-size: 1.1rem;
-  color: #088A08;
+  color: #07ac07;
 }
 
 .galeria_productos {
@@ -294,7 +292,7 @@ p {
 }
 
 .subir {
-  color: #088A08;
+  color: #07ac07;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -315,7 +313,7 @@ h2 {
   justify-content: space-around;
 }
 .container_card .card {
-  background: #c4c9c4;
+  background: #07ac07;
   height: auto;
   width: 300px;
   padding: 2.5rem;
@@ -329,12 +327,13 @@ h2 {
 }
 .container_card .card p {
   color: black;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 .container_card .card p span {
   display: block;
   font-size: 2rem;
-  color: red;
+  color: #fff;
 }
 .container_card .card:hover {
   transform: scale(1.1);
@@ -342,7 +341,6 @@ h2 {
 }
 .container_card .card_img {
   border-radius: 0.5rem;
-  background: red;
   height: 200px;
   margin-bottom: 1rem;
 }
@@ -360,27 +358,58 @@ h2 {
 }
 
 /* ---------EVENTOS---------- */
-.eventos_link {
+h2 {
+  margin: 0.5rem;
+}
+
+.cuerpo_eventos {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding-top: 1rem;
 }
-.eventos_link p {
-  margin: 2rem;
+
+.proximos_eventos {
+  padding-left: 0.2rem;
 }
-.eventos_link a {
-  background-color: green;
-  font-size: 0.7rem;
-  text-align: center;
-  padding: 0.7rem 1rem;
+.proximos_eventos p {
+  margin-bottom: 0.7rem;
+}
+.proximos_eventos .subtitulo {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2e1a7e;
+}
+.proximos_eventos .eventos_link {
+  display: flex;
+  justify-content: center;
+  padding: 1.2rem;
+}
+.proximos_eventos a {
+  background-color: #07ac07;
+  font-size: 1rem;
+  font-weight: 700;
   text-transform: uppercase;
-  color: #f6faf6;
-  border-radius: 0.7rem;
-  transition: all 0.5s ease;
+  padding: 1rem 1rem;
+  margin: 1rem 3rem;
+  border-radius: 0.6rem;
+  letter-spacing: 0.1rem;
 }
-.eventos_link a:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.75);
+.proximos_eventos a:hover {
+  color: white;
+  background: #2e1a7e;
+  border: 1px solid #2e1a7e;
+}
+
+.descripcion {
+  margin-bottom: 0.7rem;
+}
+.descripcion .texto1,
+.descripcion .texto2,
+.descripcion .list {
+  margin-bottom: 0.7rem;
+  line-height: 170%;
+}
+.descripcion .list {
+  list-style-type: circle;
 }
 
 /* ---------CONTACTO---------- */
@@ -467,6 +496,27 @@ footer a p {
 
   /*----promociones----*/
   /*----eventos----*/
+  h2 {
+    margin: 0.5rem;
+  }
+
+  .cuerpo_eventos {
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .descripcion {
+    margin-bottom: 0.7rem;
+    text-align: justify;
+  }
+  .descripcion .texto1,
+.descripcion .texto2,
+.descripcion .list {
+    margin-bottom: 0.7rem;
+    line-height: 170%;
+    font-size: 1rem;
+  }
+
   /*----contacto----*/
   .container-contacto {
     height: auto;
@@ -517,12 +567,12 @@ footer a p {
 }
 
 nav {
-  background: #1a0764;
+  background: #2e1a7e;
   height: 70px;
   width: 100%;
 }
 nav h1 {
-  color: white;
+  color: #fff;
 }
 nav ul {
   float: right;
@@ -533,7 +583,7 @@ nav li {
   line-height: 70px;
 }
 nav li a {
-  color: white;
+  color: #fff;
   font-size: 17px;
   padding: 7px 13px;
   border-radius: 3px;
@@ -541,7 +591,7 @@ nav li a {
 }
 nav li a.active,
 nav li a:hover {
-  background: white;
+  background: #fff;
   color: black;
   transition: 0.5s;
 }
@@ -556,7 +606,7 @@ nav li a:hover {
 
 @media (max-width: 810px) {
   .contenedor {
-    background: #1a0764;
+    background: #2e1a7e;
     padding: 0.3rem 0;
     display: flex;
     justify-content: space-between;

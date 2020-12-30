@@ -24,7 +24,7 @@
         text-align: center;
 
         h1 {
-            color: rgb(7, 5, 102);
+            color: $blue;
             font-size: 3rem;
             margin-bottom: .2rem;
 
@@ -43,25 +43,29 @@
 
         .cta-pri {
             color: white;
-            background: green;
-            border: 1px solid green;
+            background: $green;
+            border: 1px solid $green;
 
         }
 
         .cta-sec {
-            color: rgb(7, 5, 102);
-            background: white;
-            border: 1px solid rgb(7, 5, 102);
+            color: $blue;
+            background: $white;
+            border: 1px solid $blue;
 
         }
+    }
 
-        .cta-sec:hover {
-            color: white;
-            background: rgb(7, 5, 102);
-            border: 1px solid rgb(7, 5, 102);
-        }
+    .cta-sec:hover {
+        color: white;
+        background: $blue;
+        border: 1px solid $blue;
+    }
 
-
+    .cta-pri:hover {
+        color: white;
+        background: $blue;
+        border: 1px solid $blue;
     }
 }
 
@@ -97,39 +101,18 @@
 
 .hero_eventos {
     @extend .hero;
-
-    .hero_eventos-txt {
-        text-align: center;
-
-        h1 {
-            color: rgb(7, 5, 102);
-            margin-bottom: .2rem;
-
-        }
-
-        .hero-registro {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            .eventos_link {
-                color: white;
-                background: green;
-                border: 1px solid green;
-
-            }
-        }
+    height: 300px;
+    min-height: 300px;
     }
 
-
-    .hero_eventos::before {
-        background: url("https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?cs=srgb&dl=pexels-picjumbocom-461077.jpg&fm=jpg") no-repeat 50%;
-        background-size: cover;
-        height: 400px;
-
-    }
+.hero_eventos::before {
+    background: url("https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?cs=srgb&dl=pexels-picjumbocom-461077.jpg&fm=jpg") no-repeat 50%;
+    background-size: cover;
+    height: 300px;
+    opacity: 1;
 
 }
+
 
 @media (max-width: 810px) {
 
@@ -177,6 +160,8 @@
 
     .hero_eventos {
         @extend .hero;
+        min-height: 250px;
+        max-height: 250px;
 
         .hero_eventos-txt {
             display: flex;
@@ -189,9 +174,9 @@
         }
 
         .eventos_link {
-            color: white;
-            background: green;
-            border: 1px solid green;
+            color: $white;
+            background: $green;
+            border: 1px solid $green;
         }
     }
 
@@ -199,6 +184,6 @@
     .hero_eventos::before {
         background: url("https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?cs=srgb&dl=pexels-picjumbocom-461077.jpg&fm=jpg") no-repeat 50%;
         background-size: cover;
-        height: 400px;
+        height: 250px;
     }
 }
